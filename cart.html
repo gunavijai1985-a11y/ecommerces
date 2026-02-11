@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart - ShopZone</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+}
+
+/* NAVBAR */
+.navbar{
+    background:#111;
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+/* CONTAINER */
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:40px auto;
+}
+
+/* CART TABLE */
+.cart-table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.cart-table th, .cart-table td{
+    padding:15px;
+    text-align:center;
+}
+
+.cart-table th{
+    background:#222;
+    color:white;
+}
+
+.cart-table img{
+    width:80px;
+    border-radius:8px;
+}
+
+.quantity input{
+    width:60px;
+    padding:5px;
+}
+
+/* REMOVE BUTTON */
+.remove-btn{
+    background:#e53935;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* SUMMARY BOX */
+.summary{
+    margin-top:30px;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    width:350px;
+    float:right;
+}
+
+.summary h3{
+    margin-bottom:15px;
+}
+
+.summary p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+.checkout-btn{
+    margin-top:15px;
+    width:100%;
+    padding:12px;
+    background:#28a745;
+    border:none;
+    color:white;
+    font-size:16px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+footer{
+    clear:both;
+    margin-top:80px;
+    text-align:center;
+    padding:20px;
+    background:#111;
+    color:white;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>ShopZone</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="product.html">Products</a>
+        <a href="login.html">Login</a>
+    </div>
+</div>
+
+<div class="container">
+
+<form method="POST" action="">
+    <!-- Later Django will handle this POST -->
+
+    <table class="cart-table">
+        <tr>
+            <th>Product</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Remove</th>
+        </tr>
+
+        <!-- SAMPLE PRODUCT (Django will repeat this in loop) -->
+        <tr>
+            <td>
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+            </td>
+
+            <td>Realme 5G Smartphone</td>
+
+            <td>₹12,999</td>
+
+            <td class="quantity">
+                <input type="number" name="qty_1" value="1" min="1">
+            </td>
+
+            <td>₹12,999</td>
+
+            <td>
+                <button type="submit" name="remove_1" class="remove-btn">Remove</button>
+            </td>
+        </tr>
+
+    </table>
+
+    <!-- CART SUMMARY -->
+    <div class="summary">
+        <h3>Order Summary</h3>
+        <p>Subtotal: ₹12,999</p>
+        <p>Shipping: ₹50</p>
+        <p><strong>Grand Total: ₹13,049</strong></p>
+
+        <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+
+</form>
+
+</div>
+
+<footer>
+    © 2026 Ekart |ekart.com
+</footer>
+
+</body>
+</html>
