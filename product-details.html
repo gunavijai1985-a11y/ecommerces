@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Luxe Watches</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>LUXE</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cart.html">Cart <span class="cart-count">0</span></a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Product Details Section -->
+    <section class="product-details-section">
+        <div class="container">
+            <div class="product-details">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="productImage" src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&h=600&fit=crop" alt="Product">
+                    </div>
+                </div>
+                
+                <div class="product-content">
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a> / <a href="products.html">Products</a> / <span id="productName">Classic Elegance</span>
+                    </div>
+                    
+                    <h1 id="productTitle">Classic Elegance</h1>
+                    
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(4.8 out of 5)</span>
+                    </div>
+                    
+                    <p class="product-price" id="productPrice">$299.99</p>
+                    
+                    <div class="product-description">
+                        <h3>Description</h3>
+                        <p id="productDescription">
+                            The Classic Elegance is a timeless masterpiece that combines traditional craftsmanship with modern precision. Featuring a genuine leather strap and a polished stainless steel case, this watch is perfect for both formal occasions and everyday wear.
+                        </p>
+                        
+                        <h4>Features:</h4>
+                        <ul id="productFeatures">
+                            <li>Swiss quartz movement for accuracy</li>
+                            <li>Water-resistant up to 50 meters</li>
+                            <li>Scratch-resistant sapphire crystal</li>
+                            <li>Genuine leather strap with butterfly clasp</li>
+                            <li>2-year international warranty</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <label>Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" id="decreaseQty">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10" readonly>
+                                <button class="qty-btn" id="increaseQty">+</button>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary btn-large" id="addToCartBtn">Add to Cart</button>
+                    </div>
+                    
+                    <div id="cartMessage" class="cart-message" style="display: none;">
+                        Item added to cart successfully!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2 class="section-title">You May Also Like</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=400&h=400&fit=crop" alt="Modern Sport">
+                        <div class="product-overlay">
+                            <a href="product-details.html?id=2" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Modern Sport</h3>
+                        <p class="price">$399.99</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=400&h=400&fit=crop" alt="Luxury Gold">
+                        <div class="product-overlay">
+                            <a href="product-details.html?id=3" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Luxury Gold</h3>
+                        <p class="price">$599.99</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=400&h=400&fit=crop" alt="Minimalist Black">
+                        <div class="product-overlay">
+                            <a href="product-details.html?id=4" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Minimalist Black</h3>
+                        <p class="price">$249.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LUXE Watches</h3>
+                    <p>Premium timepieces for the discerning collector</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@luxewatches.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>Address: 123 Watch Street, NY 10001</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Luxe Watches. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
